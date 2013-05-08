@@ -1,4 +1,3 @@
-
 #Color Thief*
 
 A script for grabbing the dominant color or color palette from an image. Uses javascript and canvas.
@@ -7,7 +6,7 @@ A script for grabbing the dominant color or color palette from an image. Uses ja
 
 
 
-*I've added upload functionality, so now you don't need to statictally add images and it provides you the functionality to try this plugin to see if it fits your needs. -Aleks
+###*<em>With additional upload functionality, so now it provides you the possibility to try this plugin to see if it fits your needs. -Aleks</em>
 
 
 
