@@ -14,41 +14,38 @@
 
 	<link rel="stylesheet" href="css/app.css">
 
-	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 </head>
 <body>
+<a href="https://github.com/achudars/color-thief"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
 <div id="container">
 	<header>
-      <h1>Color Thief</h1>
-      <h4><a href="http://lokeshdhakar.com">by Lokesh Dhakar</a></small></h4>
+      <h1>Color Thief*</h1>
+      <h4><a href="http://lokeshdhakar.com">by Lokesh Dhakar with upload functionality by Aleksandrs Cudars</a></small></h4>
       
       <p>A script for grabbing the dominant color or color palette from an image. Uses Javascript and the canvas tag to make it happen.</p>
-      <p><a href="http://www.lokeshdhakar.com/color-thief/">Read more on my blog</a> | <a href="https://github.com/lokesh/color-thief">Get the code on Github</a>
+      <p><a href="http://www.lokeshdhakar.com/color-thief/">Lokesh's blog</a> | <a href="https://github.com/lokesh/color-thief">Get Lokesh's code on Github</a> | <a href="https://github.com/achudars/color-thief">Get Aleks's code on Github</a>
       </p>
 	</header>
 
-  <h2>Examples</h2>
 	<div id="main" role="main">
 
 	</div>
 </div> <!--! end of #container -->
 
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="js/libs/jquery.lettering.js"></script>
 <script src="js/libs/mustache.js"></script>
-
-
 <script src="js/libs/quantize.js"></script>
 <script src="js/color-thief.js"></script>
 
-
-<!-- Using Mustache templating -->
+<!-- PLACEHOLDER FOR THE IMAGE -->
 <script id='template' type='text/x-mustache'>
-  {{#images}}
-  <div class="imageSection {{class}} ">
+<input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" />
+<div class="imageSection">
     <div class="imageWrap">
-      <img class="targetImage" src="img/{{file}}" data-colorcount="{{colorCount}}" />
+      <img class="targetImage" id="uploadPreview" data-colorcount="{{colorCount}}" />
     </div>
     <div class="colors">
       <div class="function dominantColor">
@@ -60,10 +57,23 @@
         <div class="swatches"></div>
       </div>
     </div>
-  </div>
-  {{/images}}
+</div>
+
 </script>
 
+<!-- PREVIEW OF THE IMAGE -->
+<script type="text/javascript">
+    function PreviewImage() {
+        oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("uploadPreview").src = oFREvent.target.result;
+        };
+    };
+</script>
+<!-- COLOR THIEF DOES ITS MAGIC HERE -->
 <script src="index.js"></script>
+<script src="js/libs/socialite.min.js"></script>
 </body>
 </html>

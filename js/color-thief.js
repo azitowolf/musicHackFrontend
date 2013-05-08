@@ -53,9 +53,16 @@ CanvasImage.prototype.getPixelCount = function () {
     return this.width * this.height;
 };
 
-CanvasImage.prototype.getImageData = function () {
-    return this.context.getImageData(0, 0, this.width, this.height);
-};
+
+    CanvasImage.prototype.getImageData = function () {
+        try {
+            return this.context.getImageData(0, 0, this.width, this.height);
+        } catch(e) {
+            console.log(e);
+        }
+    };
+
+
 
 CanvasImage.prototype.removeCanvas = function () {
     $(this.canvas).remove();
