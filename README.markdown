@@ -4,11 +4,9 @@ A script for grabbing the dominant color or color palette from an image. Uses ja
 
 [See a Demo](http://lokeshdhakar.com/projects/color-thief) | [Read more on my blog](http://lokeshdhakar.com/color-thief)
 
-
-
 ###*<em>With additional upload functionality, so now it provides you the possibility to try this plugin to see if it fits your needs. -Aleks</em>
 
-
+<a href="http://imgur.com/AKoBgXK"><img src="http://i.imgur.com/AKoBgXK.png" title="Hosted by imgur.com" /></a>
 
 
 
