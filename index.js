@@ -24,6 +24,7 @@ $(document).ready(function () {
                     .css('background-color', 'rgba('+ value +', 1)');
                 root.append(swatchEl);
             });
+            colorArray.push(colors);
         };
 
         // Dominant Color
@@ -36,6 +37,7 @@ $(document).ready(function () {
         var medianPalette = createPalette(image, colorCount);
         var medianCutPalette = imageSection.find('.medianCutPalette .swatches');
         appendColors(medianPalette, medianCutPalette);
+
 
     });
 });

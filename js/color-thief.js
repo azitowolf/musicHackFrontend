@@ -227,9 +227,13 @@ function createAreaBasedPalette(sourceImage, colorCount) {
             rgb.g = ~~(rgb.g/count);
             rgb.b = ~~(rgb.b/count);
             palette.push(rgb);
+
         }
     }
 
     return palette;
 
 }
+
+colorArray = [];
+
