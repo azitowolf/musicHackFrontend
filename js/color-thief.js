@@ -19,7 +19,6 @@
  * Requires jquery and quantize.js.
  */
 
-
 /*
   CanvasImage Class
   Class that wraps the html image element and canvas.
@@ -232,4 +231,5 @@ function createAreaBasedPalette(sourceImage, colorCount) {
     }
 
     return palette;
+
 }
